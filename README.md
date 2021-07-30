@@ -15,9 +15,9 @@ Metamodel for the Model for Manufacturing (MfM) methodology.
 
 ![metamodel_semantic](semantic.png)
 
-- In this preliminary approach, the Semantic Model has been modelled just as 3 common attributes 'name', 'shortName' and 'description' for all classes in 'scope', 'data' and 'behaviour' packages.
-- The idea behind this solution is based on having a detailed description of all the ontology concepts for the future construction of interfaces without doubts about semantics.
-- The 3 attributes are defined in the class AbstractSemanticAttributes which is inherited by the rest of classes.
+- In this preliminary approach, the Semantic Model has been modelled just as a common 'description' attribute for 'DataObject' and 'Property' classes in 'scope' package.
+- The idea behind this solution is based on having a detailed description of ontology concepts related to the Data model for the future construction of interfaces without doubts about semantics.
+- The 'description' attribute is defined in the class AbstractSemanticAttributes which is inherited by 'DataObject' and 'Property' classes.
 
 ### Metamodel: Scope Model
 
