@@ -65,5 +65,8 @@ Metamodel for the Model for Manufacturing (MfM) methodology.
 
 ### Metamodel: overview
 
-![metamodel_overview](overview.png)
+Full overview:
+![metamodel_overview_full](overview_full.png)
 
+Simplified overview:
+![metamodel_overview](overview.png)
