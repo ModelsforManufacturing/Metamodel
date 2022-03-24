@@ -1,6 +1,10 @@
 # Metamodel
 Metamodel for the Model for Manufacturing (MfM) methodology.
 
+### Overview
+
+![metamodel_overview](overview.png)
+
 ![metamodel](metamodel.png)
 
 - All classes inherit from the `AbstractMLMAtributes` class in the `mfm` (model lifecycle management) package, which contains a series of attributes for managing the model lifecycle.
@@ -11,7 +15,7 @@ Metamodel for the Model for Manufacturing (MfM) methodology.
 - Some classes have relationships with themselves: `Activity`, `Means`, `DataObject`, `Task`.
 
 
-### Metamodel: Semantic Model
+### Semantic Model
 
 ![metamodel_semantic](semantic.png)
 
@@ -19,7 +23,7 @@ Metamodel for the Model for Manufacturing (MfM) methodology.
 - The idea behind this solution is based on having a detailed description of ontology concepts related to the Data model for the future construction of interfaces without doubts about semantics.
 - The `description` attribute is defined in the `AbstractSemanticAttributes` class which is inherited by `DataObject` and `Property` classes.
 
-### Metamodel: Scope Model
+### Scope Model
 
 ![metamodel_scope](scope.png)
 
@@ -34,7 +38,7 @@ Metamodel for the Model for Manufacturing (MfM) methodology.
 - The relationship between `Activity` and `Means` is simple and direct.
 - The relationship between `Activity` and `DataObject` can be `input` (for IDEF0 inputs and controllers) and `output` (for IDEF0 outputs).
 
-### Metamodel: Data Model
+### Data Model
 
 ![metamodel_data](data.png)
 
@@ -43,7 +47,7 @@ Metamodel for the Model for Manufacturing (MfM) methodology.
 - `Property` has two attributes of type string (`dataType`, `value`) for primitive data types like (integer, 8) or (float, 8.0) or for classes and objects like (Material, AA7075).
 - Data objects can be related to each other through the `related` role, which is used to specify what type of relationship exists between both objects.
 
-### Metamodel: Behaviour Model
+### Behaviour Model
 
 ![metamodel_behaviour](behaviour.png)
 
@@ -59,6 +63,3 @@ Metamodel for the Model for Manufacturing (MfM) methodology.
 - A `Rule` can have several `Constraints`.
 - A `Constraint` is associated with a `Property` of a data object.
 
-### Metamodel: overview
-
-![metamodel_overview](overview.png)
