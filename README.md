@@ -30,7 +30,7 @@ Metamodel for the Model for Manufacturing (MfM) methodology.
 - The root class is `ScopeModel`, which is composed of a main `root` activity.
 - The important concepts of the Scope Model are the activities (`Activity`), the resources or means for their realization (`Means`) and the objects required and produced by the activity (`DataObject`, modelled in the data package), as well as the relationships between them.
 - The sequence of activities is modelled by the relationship between Activity objects, through the roles `previous` and `next`.
-- An activity can be a `ComposedActivity` (which is decomposed into other subactivities, with `parent` and `child` roles) or an `ElementaryActivity` (without children). They are both abstract classes. The latter is defined in the `behaviour` package.
+- An activity can be a `ComposedActivity` (which is decomposed into other subactivities, with `parent` and `child` roles) or an `ElementaryActivity` (without children). The latter is defined in the `behaviour` package.
 - The resources to carry out the activities are modelled with the `Means` class.
 - Sometimes, the resources that are used in sub-activities can be packaged in a single resource, easier to associate with the parent activity (for example, “CAX” to package “CAD”, “CAD / CAM” and “CAPP” systems) . This possibility has been modelled with the aggregation relationship between `Means` (`bundle` role).
 - The data objects to be used in the activities are modelled with `DataObject` class. (Note: these classes are valid in IDEF0 for inputs, outputs and controllers.)
@@ -51,7 +51,7 @@ Metamodel for the Model for Manufacturing (MfM) methodology.
 
 ![metamodel_behaviour](behaviour.png)
 
-- The root class is `BehaviourModel`, which is composed of all the `ElementaryActivity` activities defined in the Scope Model.
+- The root class is `BehaviourModel`, which is composed of all the `ElementaryActivity` activities (see Scope Model).
 - The important concepts of the Behaviour Model are the tasks that allow an elementary activity to be carried out, the rules associated with the tasks and their possible constraints and the data objects required or produced, as well as the relationships between them.
 - An `ElementaryActivity` adds at least one Task.
 - Each `Means` (see `scope` package) of the `ElementaryActivity` can be assigned to several `Tasks`.
