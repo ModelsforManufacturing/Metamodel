@@ -19,9 +19,9 @@ Metamodel for the Model for Manufacturing (MfM) methodology.
 
 ![metamodel_semantic](semantic.png)
 
-- In this preliminary approach, the Semantic Model has been modelled just as a common `description` attribute for `DataObject` and `Property` classes in `scope` package.
+- In this preliminary approach, the Semantic Model has been modelled just as common attributes for `DataObject` and `Property` classes in `scope` package.
 - The idea behind this solution is based on having a detailed description of ontology concepts related to the Data model for the future construction of interfaces without doubts about semantics.
-- The `description` attribute is defined in the `SemanticAttributes` abstract class which is inherited by `DataObject` and `Property` classes.
+- Attributes are defined in the `SemanticAttributes` abstract class which is inherited by `DataObject` and `Property` classes.
 
 ### Scope Model
 
@@ -30,11 +30,11 @@ Metamodel for the Model for Manufacturing (MfM) methodology.
 - The root class is `ScopeModel`, which is composed of a main `root` activity.
 - The important concepts of the Scope Model are the activities (`Activity`), the resources or means for their realization (`Means`) and the objects required and produced by the activity (`DataObject`, modelled in the data package), as well as the relationships between them.
 - The sequence of activities is modelled by the relationship between Activity objects, through the roles `previous` and `next`.
-- An activity can be a `ComposedActivity` (which is decomposed into other subactivities, with `parent` and `child` roles) or an `ElementaryActivity` (without children). The latter is defined in the `behaviour` package.
+- An activity can be a composed activity (which is decomposed into other subactivities) or an `ElementaryActivity` (without children). The latter is defined in the `behaviour` package.
 - The resources to carry out the activities are modelled with the `Means` class.
 - Sometimes, the resources that are used in sub-activities can be packaged in a single resource, easier to associate with the parent activity (for example, “CAX” to package “CAD”, “CAD / CAM” and “CAPP” systems) . This possibility has been modelled with the aggregation relationship between `Means` (`bundle` role).
 - The data objects to be used in the activities are modelled with `DataObject` class. (Note: these classes are valid in IDEF0 for inputs, outputs and controllers.)
-- Similar to resources, data objects can be related to each other by aggregation relationships (`parent` and `child` roles).
+- Similar to resources, data objects can be related to each other by aggregation relationships.
 - The relationship between `Activity` and `Means` is simple and direct.
 - The relationship between `Activity` and `DataObject` can be `input` (for IDEF0 inputs and controllers) and `output` (for IDEF0 outputs).
 
@@ -44,9 +44,9 @@ Metamodel for the Model for Manufacturing (MfM) methodology.
 
 - The root class is `DataModel`, which is composed of one or more `DataObject`.
 - The important concepts of the Data Model are the data objects and their properties, as well as the relationships between them.
-- `Property` has two attributes of type string (`dataType`, `value`) for primitive data types like (integer, 8) or (float, 8.0) or for classes and objects like (Material, AA7075).
-- Data objects can be related to each other through the `related` role, which is used to specify what type of relationship exists between both objects.
-
+- `Property` has two attributes of type string (`data_type`, `value`) for primitive data types like (integer, 8) or (float, 8.0) or for classes and objects like (Material, AA7075).
+- Data objects can be related to each other through the DataObjectRelation class, which is used to specify what type of relationship exists between both objects.
+- 
 ### Behaviour Model
 
 ![metamodel_behaviour](behaviour.png)
