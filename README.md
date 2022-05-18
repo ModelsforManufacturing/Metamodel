@@ -59,17 +59,24 @@ All MfM Metamodel classes are arranged into 6 packages:
 - The idea behind this solution is based on having a detailed description of ontology concepts related to the Data model for the future construction of interfaces without doubts about semantics.
 - Attributes are defined in the `SemanticAttributes` abstract class which is inherited by `DataObject` and `Property` classes.
 
+Example of Semantic Model and its relation with the Data Model:
+
+![metamodel_semantic_example](semantic_instance_example.png)
 
 ## Package `ontology`
 
 ![metamodel_ontology](ontology.png)
 
 - The root class `MfMOntology` is the container for the 4 models (Scope, Data, Behaviour, Semantic). Semantic Model is the only one whose definition is optional.
-- On the other hand, `Library` represents an imported part from another MfM model. It can be:
+- On the other hand, `Library` represents an exported/imported part to/from another MfM model. It can be:
     + An 'Activity' along with the full structure of its child activities, all the associated `Means`, the related data structure and the definition of its behaviour.
     + A `Means` collection.
     + A `DataObject` structure.
-    + A `DataObject` structure including the semantic data.
+    + A `SemanticModel` as a collection of `SemanticAttributes`.
+
+A more detailed figure showing the different structures/collections that can be exported/imported as a `Library`:
+
+![metamodel_ontology_detailed](ontology_detailed.png)
 
 ## Model Lifecycle Management (MLM): package `mlm`
 
