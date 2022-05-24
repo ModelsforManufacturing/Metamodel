@@ -56,7 +56,7 @@ All MfM Metamodel classes are arranged into 6 packages:
 
 - The Semantic Model has been modelled just as common attributes for `DataObject` and `Property` classes in `scope` package.
 - The idea behind this solution is based on having a detailed description of ontology concepts related to the Data model for the future construction of interfaces without doubts about semantics.
-- Attributes are defined in the `SemanticAttributes` class which are aggregated by `DataObject` and `Property` classes.
+- Attributes are defined in the `Semantic` class which are aggregated by `DataObject` and `Property` classes.
 
 This is an example of Semantic Model and its relation with the Data Model:
 
@@ -71,7 +71,7 @@ This is an example of Semantic Model and its relation with the Data Model:
     + An 'Activity' along with the full structure of its child activities, all the associated `Means`, the related data structure and the definition of its behaviour.
     + A `Means` collection.
     + A `DataObject` structure.
-    + A `SemanticModel` as a collection of `SemanticAttributes`.
+    + A `SemanticModel` as a collection of `Semantic`.
 
 The following figure shows in more detail the different structures/collections that can be exported/imported as a `Library`:
 
@@ -81,7 +81,7 @@ The following figure shows in more detail the different structures/collections t
 
 ![metamodel_mlm](mlm.png)
 
-- `MLMAttributes` is an abstract class that defines a series of common attributes for managing the lifecycle of a MfM ontology.
+- `MLM` is an abstract class that defines a series of common attributes for managing the lifecycle of a MfM ontology.
 
 
 ## Overview
